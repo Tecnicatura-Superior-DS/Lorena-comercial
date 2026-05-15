@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boceto 3 — Llamativo | Lorena Asesora Nikro</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:#fff;overflow-x:hidden;}
+/* NAV */
+nav{background:#ff2d20;padding:0;display:flex;align-items:stretch;}
+.nav-logo{background:#ffd600;padding:16px 32px;font-family:'Bangers',cursive;font-size:1.6rem;letter-spacing:2px;color:#000;clip-path:polygon(0 0,100% 0,90% 100%,0 100%);padding-right:48px;}
+nav ul{list-style:none;display:flex;align-items:center;gap:8px;padding:0 24px;flex:1;}
+nav ul a{color:#fff;text-decoration:none;font-size:.85rem;font-weight:700;padding:8px 16px;text-transform:uppercase;transition:all .2s;border-radius:4px;}
+nav ul a:hover{background:#ffd60033;color:#ffd600;}
+.nav-wa{margin-left:auto;background:#39ff14;color:#000!important;padding:12px 24px!important;border-radius:0!important;font-weight:900!important;}
+/* HERO */
+.hero{background:#ff2d20;min-height:88vh;display:flex;align-items:center;padding:60px;position:relative;overflow:hidden;}
+.hero::before{content:'★';position:absolute;right:80px;top:40px;font-size:160px;color:#ffd60022;line-height:1;}
+.hero::after{content:'★';position:absolute;left:20px;bottom:40px;font-size:100px;color:#ffffff11;line-height:1;}
+.star1{position:absolute;right:200px;bottom:60px;width:60px;height:60px;background:#ffd600;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);opacity:.6;}
+.star2{position:absolute;left:40%;top:30px;width:30px;height:30px;background:#ffffff44;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
+.hero-text{flex:1;max-width:580px;position:relative;z-index:2;}
+.hero-text h1{font-family:'Bangers',cursive;font-size:5.5rem;line-height:1;color:#fff;text-shadow:4px 4px 0 #000,-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000;margin-bottom:12px;}
+.hero-text h1 em{color:#ffd600;font-style:normal;display:block;}
+.hero-sub{background:#ffd600;color:#000;font-weight:900;font-size:1rem;padding:8px 20px;display:inline-block;margin-bottom:28px;text-transform:uppercase;transform:rotate(-1deg);}
+.hero-text p{color:#ffcccc;font-size:1rem;line-height:1.7;margin-bottom:32px;background:#00000033;padding:16px;border-left:4px solid #ffd600;}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+.btn-black{background:#000;color:#ffd600;padding:16px 32px;font-weight:900;text-decoration:none;font-size:1rem;border:3px solid #ffd600;text-transform:uppercase;transition:all .2s;font-family:'Bangers',cursive;font-size:1.3rem;letter-spacing:1px;}
+.btn-black:hover{background:#ffd600;color:#000;transform:scale(1.05);}
+.btn-green{background:#39ff14;color:#000;padding:16px 32px;font-weight:900;text-decoration:none;font-size:1rem;border:3px solid #000;text-transform:uppercase;transition:all .2s;font-family:'Bangers',cursive;font-size:1.3rem;letter-spacing:1px;}
+.btn-green:hover{transform:scale(1.05);}
+.hero-visual{flex:0 0 320px;height:400px;border:4px solid #ffd600;position:relative;z-index:2;overflow:hidden;box-shadow:8px 8px 0 #ffd600;}
+/* SOBRE */
+.sobre{background:#ffd600;padding:80px 60px;display:flex;gap:48px;align-items:center;position:relative;}
+.sobre::before{content:'🚨';position:absolute;right:60px;top:20px;font-size:4rem;transform:rotate(15deg);}
+.bubble{background:#fff;border:4px solid #000;border-radius:30px 30px 30px 0;padding:32px 40px;flex:1;max-width:560px;position:relative;box-shadow:6px 6px 0 #000;}
+.bubble::after{content:'';position:absolute;left:-24px;bottom:-4px;width:24px;height:32px;background:#fff;border-left:4px solid #000;border-bottom:4px solid #000;border-radius:0 0 0 20px;}
+.bubble h2{font-family:'Bangers',cursive;font-size:2.5rem;color:#ff2d20;margin-bottom:12px;letter-spacing:1px;}
+.bubble p{font-size:1.05rem;line-height:1.7;color:#000;font-weight:700;}
+.bubble p em{color:#ff2d20;font-style:normal;}
+.sobre-foto{flex:0 0 220px;height:280px;background:#ff2d20;border:4px solid #000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;box-shadow:6px 6px 0 #000;}
+.sobre-foto span{font-size:4rem;}
+.sobre-foto p{color:#ffd600;font-family:'Bangers',cursive;font-size:1rem;letter-spacing:1px;}
+/* MISIONES */
+.misiones{background:#111;padding:80px 60px;text-align:center;}
+.misiones h2{font-family:'Bangers',cursive;font-size:3.5rem;color:#39ff14;letter-spacing:2px;margin-bottom:8px;text-shadow:3px 3px 0 #000;}
+.misiones .sub{color:#666;margin-bottom:48px;font-size:.9rem;text-transform:uppercase;letter-spacing:2px;}
+.mission-cards{display:flex;gap:24px;justify-content:center;}
+.mc{flex:1;max-width:300px;padding:36px 28px;text-align:center;transition:transform .2s;cursor:default;}
+.mc:hover{transform:translateY(-8px) rotate(1deg);}
+.mc.red{background:#ff2d20;border:4px solid #000;box-shadow:6px 6px 0 #ffd600;}
+.mc.yellow{background:#ffd600;border:4px solid #000;box-shadow:6px 6px 0 #39ff14;}
+.mc.green{background:#39ff14;border:4px solid #000;box-shadow:6px 6px 0 #ff2d20;}
+.mc-num{font-family:'Bangers',cursive;font-size:3rem;line-height:1;margin-bottom:8px;}
+.mc.red .mc-num{color:#ffd600;}
+.mc.yellow .mc-num{color:#ff2d20;}
+.mc.green .mc-num{color:#000;}
+.mc-icon{font-size:2.5rem;margin-bottom:12px;}
+.mc h3{font-family:'Bangers',cursive;font-size:1.6rem;letter-spacing:1px;margin-bottom:10px;}
+.mc.red h3,.mc.red p{color:#fff;}
+.mc.yellow h3,.mc.yellow p{color:#000;}
+.mc.green h3,.mc.green p{color:#000;}
+.mc p{font-size:.85rem;font-weight:700;line-height:1.5;}
+/* BENEFICIOS */
+.beneficios{background:#39ff14;padding:80px 60px;text-align:center;}
+.beneficios h2{font-family:'Bangers',cursive;font-size:3rem;color:#000;letter-spacing:2px;margin-bottom:48px;text-shadow:2px 2px 0 #ff2d20;}
+.ben-bubbles{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;}
+.ben-b{background:#fff;border:4px solid #000;border-radius:20px;padding:28px 24px;max-width:340px;box-shadow:5px 5px 0 #000;text-align:left;}
+.ben-b .ico{font-size:2rem;margin-bottom:12px;}
+.ben-b p{font-size:1rem;font-weight:700;color:#000;line-height:1.6;}
+.ben-b p em{color:#ff2d20;font-style:normal;}
+/* CONTACTO */
+.contacto{background:#ff2d20;padding:80px 60px;position:relative;overflow:hidden;}
+.contacto::before{content:'🚨';position:absolute;top:20px;left:40px;font-size:80px;opacity:.15;}
+.contacto::after{content:'🔒';position:absolute;bottom:20px;right:40px;font-size:80px;opacity:.15;}
+.contacto-inner{max-width:700px;margin:0 auto;text-align:center;position:relative;z-index:2;}
+.contacto h2{font-family:'Bangers',cursive;font-size:3.5rem;color:#fff;letter-spacing:2px;margin-bottom:8px;text-shadow:3px 3px 0 #000;}
+.contacto p{color:#ffcccc;margin-bottom:40px;font-size:1rem;font-weight:700;}
+.big-btn{display:block;background:#ffd600;color:#000;padding:24px 40px;font-family:'Bangers',cursive;font-size:2rem;letter-spacing:2px;text-decoration:none;border:4px solid #000;box-shadow:8px 8px 0 #000;margin-bottom:24px;transition:all .2s;text-transform:uppercase;}
+.big-btn:hover{transform:translate(-4px,-4px);box-shadow:12px 12px 0 #000;}
+.wa-big{display:block;background:#39ff14;color:#000;padding:18px 40px;font-family:'Bangers',cursive;font-size:1.6rem;letter-spacing:2px;text-decoration:none;border:4px solid #000;box-shadow:6px 6px 0 #000;transition:all .2s;text-transform:uppercase;}
+.wa-big:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 #000;}
+.contact-info{margin-top:32px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;}
+.ci{background:#00000033;padding:12px 24px;border:2px solid #ffffff44;border-radius:8px;}
+.ci p{color:#fff;font-weight:700;font-size:.88rem;}
+footer{background:#000;color:#333;text-align:center;padding:24px;font-size:.82rem;}
+footer em{color:#ffd600;font-style:normal;}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">🚨 LORENA ALARMAS</div>
+  <ul>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Sobre Mí</a></li>
+    <li><a href="#">Misiones</a></li>
+    <li><a href="https://wa.me/5492235520390" class="nav-wa">📲 ¡LLAMAME!</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="star1"></div>
+  <div class="star2"></div>
+  <div class="hero-text">
+    <h1>¡La asesora<em>que NO duerme!</em></h1>
+    <div class="hero-sub">⚡ Nikro Alarmas · Mar del Plata · Autorizada ⚡</div>
+    <p>Soy Lorena. Me obsesiono con que nadie te robe. Ni un alfajor. Ni un mate. ¡Nada! Con Nikro Alarmas y mi asesoría, dormís tranquilo/a de verdad.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-black">Ver misiones 🎯</a>
+      <a href="https://wa.me/5492235520390" class="btn-green">📲 ¡WhatsApp ya!</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="lorena.jpg" alt="Lorena" style="width:100%;height:100%;object-fit:cover;object-position:top center;">
+  </div>
+</section>
+
+<section class="sobre">
+  <div class="sobre-foto" style="overflow:hidden;">
+    <img src="lorena.jpg" alt="Lorena" style="width:100%;height:100%;object-fit:cover;object-position:top center;">
+  </div>
+  <div class="bubble">
+    <h2>¿Quién soy?</h2>
+    <p>¡Hola! Soy Lorena, asesora comercial autorizada de <em>Nikro Alarmas</em> en Mar del Plata. Me obsesiona que nadie te robe ni un alfajor 🙅‍♀️</p>
+    <p style="margin-top:12px;">Trabajo con el respaldo de Nikro, una empresa líder en seguridad, pero con el trato cercano y personalizado que solo una persona de confianza te puede dar. <em>¡Yo vigilo por vos!</em></p>
+  </div>
+</section>
+
+<section class="misiones">
+  <h2>🎯 LAS MISIONES</h2>
+  <p class="sub">Elegí tu nivel de protección</p>
+  <div class="mission-cards">
+    <div class="mc red">
+      <div class="mc-num">01</div>
+      <div class="mc-icon">🏠</div>
+      <h3>Misión: Casa Segura</h3>
+      <p>Alarma residencial instalada y funcionando. ¡El ladrón ni se acerca!</p>
+    </div>
+    <div class="mc yellow">
+      <div class="mc-num">02</div>
+      <div class="mc-icon">📡</div>
+      <h3>Misión: Ojo Abierto</h3>
+      <p>Monitoreo 24hs. Mientras dormís como un oso, yo vigilo por vos.</p>
+    </div>
+    <div class="mc green">
+      <div class="mc-num">03</div>
+      <div class="mc-icon">🏘️</div>
+      <h3>Misión: Barrio Unido</h3>
+      <p>Alarma vecinal. Todo el barrio conectado. ¡Fuerza en equipo!</p>
+    </div>
+  </div>
+</section>
+
+<section class="beneficios">
+  <h2>🐻 ¿POR QUÉ YO?</h2>
+  <div class="ben-bubbles">
+    <div class="ben-b">
+      <div class="ico">😴</div>
+      <p>Dormí como un oso hibernando. <em>¡Yo vigilo por vos!</em> Las 24 horas, los 365 días del año.</p>
+    </div>
+    <div class="ben-b">
+      <div class="ico">⚡</div>
+      <p>Respuesta <em>más rápida que el ladrón.</em> Alarmas Nikro con monitoreo profesional inmediato.</p>
+    </div>
+    <div class="ben-b">
+      <div class="ico">🤝</div>
+      <p>Trato <em>de persona a persona.</em> Sin call centers, sin robots. ¡Yo te atiendo directamente!</p>
+    </div>
+  </div>
+</section>
+
+<section class="contacto">
+  <div class="contacto-inner">
+    <h2>🚨 ¡HORA DE ACTUAR!</h2>
+    <p>No esperes a que pase algo. ¡Clic antes que el ladrón!</p>
+    <a href="https://wa.me/5492235520390?text=Hola%20Lorena!%20Quiero%20info%20sobre%20alarmas" class="big-btn">
+      🔒 ¡CLIC ACÁ ANTES QUE EL LADRÓN!
+    </a>
+    <a href="https://wa.me/5492235520390" class="wa-big">
+      📲 WhatsApp: 223 552-0390
+    </a>
+    <div class="contact-info">
+      <div class="ci"><p>📍 Mar del Plata</p></div>
+      <div class="ci"><p>🔒 Autorizada Nikro</p></div>
+      <div class="ci"><p>⚡ Respuesta inmediata</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 <em>Lorena — Asesora Comercial Autorizada Nikro Alarmas · Mar del Plata</em> 🚨</p>
+</footer>
+</body>
+</html>
